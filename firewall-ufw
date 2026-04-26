@@ -1,0 +1,16 @@
+echo "This script is only for arch based distro or custom distro that have pacman"
+echo "I will now install ufw: "
+sudo pacman -S ufw
+
+echo "I will now deny incoming and allow outgoing"
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+sudo ufw limit 22
+
+sudo systemctl start ufw
+
+sudo ufw enable
+sudo systemctl enable ufw
+
+sudo ufw status
