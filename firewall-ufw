@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "This script is only for arch based distro or custom distro that have pacman"
 echo "I will now install ufw: "
 sudo pacman -S ufw
