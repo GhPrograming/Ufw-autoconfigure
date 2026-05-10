@@ -82,3 +82,17 @@ The script uses a combination of `grep` and `tail`:
 
 ---
 *Developed for system integrity monitoring and administrative transparency.*
+
+
+
+### 1. Cloudflare WARP Installer (`warp-setup.sh`)
+Automates the deployment of Cloudflare WARP for encrypted DNS and traffic routing.
+- **Privacy:** Masks your IP and encrypts DNS queries using 1.1.1.1.
+- **Automation:** Handles service activation (`systemctl`) and initial client registration.
+⚠️ Requirements
+
+    OS: Arch Linux (or Arch-based distros).
+
+    AUR Helper: yay is required for the WARP installation.
+
+    Privileges: sudo access is mandatory for system services.
