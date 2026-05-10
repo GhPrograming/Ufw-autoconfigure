@@ -1,0 +1,21 @@
+#!/bin/bash
+echo "Alege numarul de instalari: "
+read NUMAR  
+
+echo "Se afișează ultimele $NUMAR instalări:"
+grep "installed" /var/log/pacman.log | tail -n $NUMAR
+
+echo "Introdu o adresa: "
+read -p adresa 
+
+echo "Scanez adresa: "
+nmap -F $adresa
+echo "Verific porturile 80, 22, 23, 443: "
+nmap -p 80 $adresa
+
+nmap -p 22 $adresa
+
+nmap -p 23 $adresa
+
+nmap -p 443 $adresa
+
