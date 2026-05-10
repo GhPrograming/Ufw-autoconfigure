@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "Alege o adresa de ip: " site
+
+ping -c 5 $site
+
+nmap -F $site >> site.txt
+# to save in txt
