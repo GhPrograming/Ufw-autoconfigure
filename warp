@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "This is only for arch based distro "
+
+echo "You will need yay "
+
+yay -S cloudflare-warp-bin
+
+sudo systemctl enable warp-svc
+
+sudo systemctl start warp-svc
+
+warp-cli registartion new 
+
+warp-cli connect
+
+warp-cli status
